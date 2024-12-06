@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "name": "magnetonn.in(backend)",
+  "name":"magnetonn.in",
   "version": "1.0.0",
   "main": "controller.js",
   "devDependencies": {},
