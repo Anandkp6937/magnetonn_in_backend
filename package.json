@@ -4,5 +4,24 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
     "pg": "^8.13.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "magnetonn.in(backend)",
+  "version": "1.0.0",
+  "main": "controller.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anandkp6937/magnetonn_in_backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anandkp6937/magnetonn_in_backend/issues"
+  },
+  "homepage": "https://github.com/Anandkp6937/magnetonn_in_backend#readme",
+  "description": ""
 }
