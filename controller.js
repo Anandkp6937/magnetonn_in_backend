@@ -6,6 +6,7 @@ function displayAllPosts(req,res){
      pool.query(q,(err,dataResult)=>{
           if(err){
                console.log(err);
+               res.json('message:some error occured');
           }
           else{
                console.log(dataResult.rows);
