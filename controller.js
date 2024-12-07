@@ -24,7 +24,7 @@ function addNewPost(req,res){
           }
           else{
                console.log(dataResult.rows);
-               res.send('uploaded sucessfully')
+               res.json({message:'uploaded sucessfully'});
           }
      })
 
