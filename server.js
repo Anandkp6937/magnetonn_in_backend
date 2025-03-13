@@ -6,11 +6,12 @@ require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.use(cors());
-const {displayAllPosts,addNewPost}=require('./controller');
+const {displayAllPosts,addNewPost,subcriber}=require('./controller');
 
 
 app.get('/',displayAllPosts);
 app.post('/addnewpost',addNewPost);
+app.post('/subscribe',subcriber);
 
 app.listen(PORT,()=>{
      console.log(`server running on PORT:${PORT}`);

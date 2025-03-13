@@ -29,5 +29,17 @@ function addNewPost(req,res){
      })
 
 }
-
-module.exports={displayAllPosts,addNewPost};
+function subcriber(req,res){
+     let {email}=req.body;
+     let q=`INSERT INTO clients (email) VALUES($1)`;
+     pool.query(q,[email],(err,result)=>{
+          if(err){
+               console.log(err);
+               res.json({message:'user already exists'})
+          }
+          else{
+               res.json({message:'new subsciber added'})
+          }
+     })
+}
+module.exports={displayAllPosts,addNewPost,subcriber};
