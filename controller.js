@@ -15,21 +15,21 @@ function displayAllPosts(req,res){
      })
 }
 
-function addNewPost(req,res){
-     let {Title,Description,URL,CreatedOn,Catagory}=req.body;
-     let q=`INSERT INTO posts (title,description,date,url,category) VALUES($1,$2,$3,$4,$5) RETURNING *`;
-     pool.query(q,[Title,Description,CreatedOn,URL,Catagory],(err,dataResult)=>{
+function addNewPost(req,res){  
+     let {Title,Description,URL,CreatedOn,Catagory,Imageurl}=req.body;
+     let q=`INSERT INTO posts (title,description,date,url,category,image_url) VALUES($1,$2,$3,$4,$5,$6) RETURNING *`;
+     pool.query(q,[Title,Description,CreatedOn,URL,Catagory,Imageurl],(err,dataResult)=>{
           if(err){
                console.log(err);
           }
           else{
-               console.log(dataResult.rows);
                res.json({message:'uploaded sucessfully'});
           }
      })
 
 }
 function subcriber(req,res){
+     console.log(req.params);
      let {email}=req.body;
      let q=`INSERT INTO clients (email) VALUES($1)`;
      pool.query(q,[email],(err,result)=>{
